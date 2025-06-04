@@ -13,7 +13,7 @@ function Edit() {
   useEffect(() => {
     async function fetchBlog() {
       try {
-        const res = await fetch(`http://localhost:3000/post${id}`)
+        const res = await fetch(`http://localhost:3000/post/${id}`)
      
         const data = await res.json()
         setTitle(data.title)
@@ -30,7 +30,7 @@ function Edit() {
   async function updatedBlog(e) {
     e.preventDefault()
     try {
-      const res = await fetch(`http://localhost:3000/post${id}}`, {
+      const res = await fetch(`http://localhost:3000/post/${id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ title, description, author }),

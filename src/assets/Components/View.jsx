@@ -27,7 +27,7 @@ function View() {
   if (!confirm) return;
 
   try {
-    let res = await fetch(`http://localhost:3000/post${id}`, {
+    let res = await fetch(`http://localhost:3000/post/${id}`, {
       method: 'DELETE',
     });
 
